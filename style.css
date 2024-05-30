@@ -94,6 +94,7 @@ body {
     background-color:#38bdf8;
     color: white;
     height: 100vh;
+    width:20vw;
 }
 .dashboard > h1 {
     font-size: 40px;
@@ -220,4 +221,25 @@ li {
     margin: 4px;
     font-size: 16px;
 }
-
+.image {
+    height: 25px;
+    margin-right: 5px;
+    margin-bottom: -4px;
+    filter: invert(100%) sepia(0%) saturate(2%) hue-rotate(75deg) brightness(101%) contrast(101%);
+}
+.notif {
+    margin-left: 5%;
+    height: 25px;
+    margin-right: 5px;
+}
+.svg-image {
+    height: 25px;
+    margin-right: 5px;
+}
+.svg-row {
+    display: flex;
+    align-items: flex-end;
+    margin-top: 15px;
+    gap: 5px;
+    justify-content: flex-end;
+}
