@@ -14,7 +14,7 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: row;
-    border: 2px solid black;
+    box-shadow: 5px 5px 5px rgb(0, 0, 0.5, 0.1);
 }
 .user_page {
     display: flex;
@@ -26,14 +26,53 @@ body {
     display: grid;
     grid-template-columns: 1fr 4.5fr;  
 }
-
 .grid-container {
     display: grid;
-    grid-template: 50px 50px 50px / 50px 50px 50px;
+    margin-top: 0px;
+    grid-template-rows: repeat(3,200px); /* Defines 3 rows, each 50px tall */
+    grid-template-columns: repeat(2,420px);
+    gap: 15px;
+    margin-left: 5%;
+}
+.text {
+    font-size: var(--font-size);
+    font-family: var(--primary-font);
+    font-weight: var(--font-weight);
+    margin-left: 2%;
+    margin-top:20px;
+    margin-bottom: 10px;
+}
+.item {
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 10px;
+    border-left: 6px solid rgb(255, 165, 0);
+    box-shadow: 2px 0px 5px rgba(0,0,0,0.2);
+    border-top: 0px;
+    border-right: 0px;
+    border-bottom: 0px;
+    padding: 8%;
+}
+.item:hover {
+    box-shadow: 3px 0px 6px rgba(0,0,0,0.6);
+    border-left: 6px solid green;
 }
 .active {
-    display: flex;
+    display: grid;
     flex-grow: 1;
+    grid-template-rows: auto 1fr
+}
+.greet {
+    font-size: 1.4rem;
+    font-weight: var(--font-weight);
+    font-family: var(--primary-font);
+    padding: 0;
+    margin-bottom: 0;
+}
+.greet-container {
+    display: flex;
+    flex-direction: column;
+    margin-right: 75%;
 }
 /* Styling Dashboard */
 .basic_nav {
@@ -61,52 +100,124 @@ body {
     padding: 20px; 
     font-family: var(--primary-font);
 }
+.link {
+    color: white;
+    text-decoration: none;
+}
 /* Styling top board */
 .input_bar {
     width: 40rem;
-    height: 2rem;
+    height: 2.3rem;
     border-radius: 1rem;   
     margin-left: 2rem ;
     margin: 10px;
+    background-color:#bed1ec ;
+    border-width: 0;
+}
+.input_bar:active {
+    border:0px;
 }
 .top {
     display: flex;
     flex-direction: row;
-    border-width: 2px;
-    border-style: solid;
-    border-color: black;
     align-items: center;
     background-color: white;
 }
 .profile {
     display: flex;
     align-items: flex-end;
-    flex-grow: 1;
     position: absolute;
     right: 5%;
-    padding:24px;
     font-family: var(--primary-font);
     font-size: var(--font-size);
     font-weight: var(--font-weight);
+    flex-direction: column;
+    justify-content: flex-end;
+}
+.username {
+    padding: 0;
+    margin: 0;
+    font-size: 24px;
+    margin-bottom: 0px;
+}
+.tag {
+    font-size: small;
+    font-weight: lighter;
 }
 .introduction {
     background-color: white;
+    padding: 0px;
+    margin-bottom: -10px;
+}
+.button-container {
+    position: absolute;
+    right:5%;
+    display: flex;
+    gap: 15%;
+}
+.buttons {
+    height:50px;
+    width:150px;
+    padding: 5px;
+    border-radius: 25px;
+    border-width: 0;
+    background-color: #38bdf8;
+    font-family: var(--primary-font);
+    color: white;
+    font-weight: bold;
+    font-size: large;
+}
+.buttons:active {
+    background-color: #0186c0;
+}
+.buttons:hover {
+    box-shadow: 3px 0px 6px  rgb(255, 165, 0,0.6)
 }
 /* Styling Announcements */
 .updates {
     display: flex;
     flex-direction: column;
-    flex-grow: 1;
-    align-items: flex-end;
+    flex-grow: 0;
     font-size: var(--font-size);
     font-weight: var(--font-weight);
     font-family: var(--primary-font);
+    padding: 0;
+    margin: 0;
+    height: 85vh;
+    position: absolute;
+    right:4%;
 }
 .card1 {
     border-radius: 10px;
-    height: 250px;
+    height: 230px;
     width: 200px;
     background-color: white;
-    box-shadow: 2px 2px 5px rgb(0, 0, 0, 0.5);
-
+    box-shadow: 2px 2px 5px rgb(0, 0, 0, 0.5); 
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    white-space: none;
+    padding: 10%;
 }
+.inner-text {
+    font-size: 12px;
+    font-weight: lighter;
+    padding: 0px;
+    margin: 0;
+}
+li {
+    list-style-type: none;
+}
+.header {
+    padding: 0;
+    margin: 0;
+}
+.trending_header{
+    padding: 2px;
+    margin: 4px;
+    font-size: 16px;
+}
+
